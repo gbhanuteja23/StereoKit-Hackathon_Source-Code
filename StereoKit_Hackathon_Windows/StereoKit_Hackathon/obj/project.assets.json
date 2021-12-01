@@ -171,23 +171,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gbhan\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Shreyansh Anchlia\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\3- Project Things\\3- StereoKit Hackathon\\StereoKit-Hackathon_Source-Code\\StereoKit_Hackathon_Windows\\StereoKit_Hackathon\\StereoKit_Hackathon.csproj",
+      "projectUniqueName": "C:\\StereoKit\\StereoKit-Hackathon_Source-Code\\StereoKit_Hackathon_Windows\\StereoKit_Hackathon\\StereoKit_Hackathon.csproj",
       "projectName": "StereoKit_Hackathon",
-      "projectPath": "D:\\3- Project Things\\3- StereoKit Hackathon\\StereoKit-Hackathon_Source-Code\\StereoKit_Hackathon_Windows\\StereoKit_Hackathon\\StereoKit_Hackathon.csproj",
-      "packagesPath": "C:\\Users\\gbhan\\.nuget\\packages\\",
-      "outputPath": "D:\\3- Project Things\\3- StereoKit Hackathon\\StereoKit-Hackathon_Source-Code\\StereoKit_Hackathon_Windows\\StereoKit_Hackathon\\obj\\",
+      "projectPath": "C:\\StereoKit\\StereoKit-Hackathon_Source-Code\\StereoKit_Hackathon_Windows\\StereoKit_Hackathon\\StereoKit_Hackathon.csproj",
+      "packagesPath": "C:\\Users\\Shreyansh Anchlia\\.nuget\\packages\\",
+      "outputPath": "C:\\StereoKit\\StereoKit-Hackathon_Source-Code\\StereoKit_Hackathon_Windows\\StereoKit_Hackathon\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\gbhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Shreyansh Anchlia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -200,6 +203,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -211,6 +215,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "StereoKit": {
             "target": "Package",
@@ -232,7 +237,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
