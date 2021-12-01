@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{B9F338BD-A226-43BF-B6B5-A797F51C7B0D}</ProjectGuid>
+    <RootNamespace>StereoKitCTest</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <ProjectName>StereoKitCTest</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)bin\$(Platform)_$(Configuration)\$(ProjectName)\</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <IntDir>$(SolutionDir)bin\intermediate\$(Platform)_$(Configuration)\$(ProjectName)\</IntDir>
+    <IncludePath>$(SolutionDir)StereoKitC;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)bin\$(Platform)_$(Configuration)\$(ProjectName)\</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <IntDir>$(SolutionDir)bin\intermediate\$(Platform)_$(Configuration)\$(ProjectName)\</IntDir>
+    <IncludePath>$(SolutionDir)StereoKitC;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>26812;26819;</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PreBuildEvent>
+      <Command>$(SolutionDir)Tools\skshaderc.exe -O3 -h -t xge -i $(SolutionDir)Tools\include $(ProjectDir)Shaders\*.hlsl</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PreBuildEvent>
+      <Command>$(SolutionDir)Tools\skshaderc.exe -O3 -h -t xge -i $(SolutionDir)Tools\include $(ProjectDir)Shaders\*.hlsl</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="demo_lighting.cpp" />
+    <ClCompile Include="demo_lines.cpp" />
+    <ClCompile Include="demo_mic.cpp" />
+    <ClCompile Include="demo_picker.cpp" />
+    <ClCompile Include="demo_ui.cpp" />
+    <ClCompile Include="demo_sprites.cpp" />
+    <ClCompile Include="demo_world.cpp" />
+    <ClCompile Include="scene.cpp" />
+    <ClCompile Include="demo_basics.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="skt_lighting.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="demo_lighting.h" />
+    <ClInclude Include="demo_lines.h" />
+    <ClInclude Include="demo_mic.h" />
+    <ClInclude Include="demo_picker.h" />
+    <ClInclude Include="demo_ui.h" />
+    <ClInclude Include="demo_sprites.h" />
+    <ClInclude Include="demo_world.h" />
+    <ClInclude Include="scene.h" />
+    <ClInclude Include="demo_basics.h" />
+    <ClInclude Include="Shaders\skt_default_lighting.hlsl.h" />
+    <ClInclude Include="Shaders\skt_light_only.hlsl.h" />
+    <ClInclude Include="skt_lighting.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\StereoKitC\StereoKitC.vcxproj">
+      <Project>{95b47c8e-3a66-483c-abee-950e6c2f621a}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <!-- Copy assets, and build the app's shaders into the final app folder -->
+  <ItemGroup>
+    <Content Include="$(SolutionDir)Examples\Assets\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\skt_default_lighting.hlsl">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="Shaders\skt_light_only.hlsl">
+      <FileType>Document</FileType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
