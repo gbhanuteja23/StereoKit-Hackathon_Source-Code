@@ -18,6 +18,11 @@ namespace StereoKit_Hackathon
 
 			cubes = new List<Cube>();
 		}
+		public void ChangeMaterialColor()
+		{
+			Random random = new Random();
+			cubeMaterial.SetColor("color", Color.HSV(new Vec3((float)random.Next() / int.MaxValue, 0.8f, 1f)));
+		}
 
 		public void Draw()
 		{
@@ -31,9 +36,8 @@ namespace StereoKit_Hackathon
 			pinchPos = pinchPos.RoundToClosest(cubeSize);
 
 			if (CheckIfCubeMeshAtPosition(pinchPos)) return;
-			
 
-			//Console.WriteLine($"pinch pos z = {pinchPos.z}");
+			ChangeMaterialColor();
 			Cube cube = new Cube(pinchPos);
 			cubes.Add(cube);
 		}
