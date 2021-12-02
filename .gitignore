@@ -9,6 +9,10 @@
 *.userosscache
 *.sln.docstates
 
+# Cache Files
+*.cache
+*.assets.cache
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
@@ -355,3 +359,7 @@ build_*/
 
 # Xmake cache files
 .xmake/
+*.cache
+*.cache
+StereoKit_Hackathon_Windows/StereoKit_Hackathon/obj/Release/netcoreapp3.1/StereoKit_Hackathon.assets.cache
+StereoKit_Hackathon_Windows/StereoKit_Hackathon/obj/Release/netcoreapp3.1/StereoKit_Hackathon.assets.cache

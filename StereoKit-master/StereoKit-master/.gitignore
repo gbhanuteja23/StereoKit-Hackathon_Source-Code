@@ -12,6 +12,10 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
+# Cache Files
+*.cache
+*.assets.cache
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
