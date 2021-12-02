@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "cmP43WxcA2K9t10eEukS5xByZLbkrQqxw2vLj79yt9hyZnxsRCTy12VpgheL73cc8mbJS5DDU6VmcJsyiBusdw==",
+  "dgSpecHash": "RvAECttJc9JpL34JmYqVo+EuWySu++27g6vQO6AfJ/zirNdzv6o3nTeUJcCwA381T9mEDdyr7aTAa5GSsN0GMQ==",
   "success": true,
-  "projectFilePath": "C:\\StereoKit\\StereoKit-Hackathon_Source-Code\\StereoKit_Hackathon_Windows\\StereoKit_Hackathon\\StereoKit_Hackathon.csproj",
+  "projectFilePath": "D:\\3- Project Things\\3- StereoKit Hackathon\\StereoKit-Hackathon_Source-Code\\StereoKit_Hackathon_Windows\\StereoKit_Hackathon\\StereoKit_Hackathon.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Shreyansh Anchlia\\.nuget\\packages\\stereokit\\0.3.4\\stereokit.0.3.4.nupkg.sha512",
-    "C:\\Users\\Shreyansh Anchlia\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+    "C:\\Users\\gbhan\\.nuget\\packages\\stereokit\\0.3.4\\stereokit.0.3.4.nupkg.sha512",
+    "C:\\Users\\gbhan\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

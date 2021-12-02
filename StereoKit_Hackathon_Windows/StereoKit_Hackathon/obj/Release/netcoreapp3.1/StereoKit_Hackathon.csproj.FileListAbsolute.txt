@@ -56,3 +56,32 @@ C:\StereoKit\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoK
 C:\StereoKit\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\obj\Release\netcoreapp3.1\StereoKit_Hackathon.dll
 C:\StereoKit\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\obj\Release\netcoreapp3.1\StereoKit_Hackathon.pdb
 C:\StereoKit\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\obj\Release\netcoreapp3.1\StereoKit_Hackathon.genruntimeconfig.cache
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\bin\Release\netcoreapp3.1\Assets\floor.hlsl.sks
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\bin\Release\netcoreapp3.1\StereoKit_Hackathon.exe
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\bin\Release\netcoreapp3.1\StereoKit_Hackathon.deps.json
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\bin\Release\netcoreapp3.1\StereoKit_Hackathon.runtimeconfig.json
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\bin\Release\netcoreapp3.1\StereoKit_Hackathon.runtimeconfig.dev.json
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\bin\Release\netcoreapp3.1\StereoKit_Hackathon.dll
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\bin\Release\netcoreapp3.1\StereoKit_Hackathon.pdb
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\bin\Release\netcoreapp3.1\StereoKit.dll
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\bin\Release\netcoreapp3.1\runtimes\android-arm64-v8a\native\StereoKitC.sym
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\bin\Release\netcoreapp3.1\runtimes\android-arm64-v8a\native\libStereoKitC.so
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\bin\Release\netcoreapp3.1\runtimes\android-arm64-v8a\native\libopenxr_loader.so
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\bin\Release\netcoreapp3.1\runtimes\linux-x64\native\StereoKitC.sym
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\bin\Release\netcoreapp3.1\runtimes\linux-x64\native\libStereoKitC.so
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\bin\Release\netcoreapp3.1\runtimes\win-x64\native\StereoKitC.dll
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\bin\Release\netcoreapp3.1\runtimes\win-x64\native\StereoKitC.pdb
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\bin\Release\netcoreapp3.1\runtimes\win10-arm\native\StereoKitC.dll
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\bin\Release\netcoreapp3.1\runtimes\win10-arm\native\StereoKitC.pdb
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\bin\Release\netcoreapp3.1\runtimes\win10-arm64\native\StereoKitC.dll
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\bin\Release\netcoreapp3.1\runtimes\win10-arm64\native\StereoKitC.pdb
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\bin\Release\netcoreapp3.1\runtimes\win10-x64\native\StereoKitC.dll
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\bin\Release\netcoreapp3.1\runtimes\win10-x64\native\StereoKitC.pdb
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\obj\Release\netcoreapp3.1\StereoKit_Hackathon.csprojAssemblyReference.cache
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\obj\Release\netcoreapp3.1\StereoKit_Hackathon.AssemblyInfoInputs.cache
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\obj\Release\netcoreapp3.1\StereoKit_Hackathon.AssemblyInfo.cs
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\obj\Release\netcoreapp3.1\StereoKit_Hackathon.csproj.CoreCompileInputs.cache
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\obj\Release\netcoreapp3.1\StereoKit_Hackathon.csproj.CopyComplete
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\obj\Release\netcoreapp3.1\StereoKit_Hackathon.dll
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\obj\Release\netcoreapp3.1\StereoKit_Hackathon.pdb
+D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\obj\Release\netcoreapp3.1\StereoKit_Hackathon.genruntimeconfig.cache
