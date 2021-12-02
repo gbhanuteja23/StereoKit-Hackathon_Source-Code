@@ -13,7 +13,6 @@ namespace StereoKit_Hackathon
 		public MeshManager()
 		{
 			cubeSize = 0.1f;
-
 			cubes = new List<Cube>();
 		}
 

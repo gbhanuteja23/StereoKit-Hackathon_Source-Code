@@ -15,19 +15,16 @@ namespace StereoKit_Hackathon
 		public Cube()
 		{
             cubePose = new Pose(0, 0, -0.5f, Quat.Identity);
-
-            cubeMat = Default.Material;
+            cubeMat = Default.Material.Copy();
             cubeModel = Model.FromMesh(
                 Mesh.GenerateCube(Vec3.One * MeshManager.cubeSize),
                 cubeMat);
-           
         }
 
         public Cube(Vec3 pos)
         {
             cubePose = new Pose(pos, Quat.Identity);
-
-            cubeMat = Default.Material;
+            cubeMat = Default.Material.Copy();
             cubeModel = Model.FromMesh(
                 Mesh.GenerateCube(Vec3.One * MeshManager.cubeSize),
                 cubeMat);            
@@ -38,6 +35,5 @@ namespace StereoKit_Hackathon
             Random random = new Random();
             cubeMat.SetColor("color", Color.HSV(new Vec3((float)random.Next() / int.MaxValue, 0.8f, 1f)));
         }
-
     }
 }
