@@ -6,22 +6,15 @@ namespace StereoKit_Hackathon
 {
 	public class MeshManager
 	{
-		public static Material cubeMaterial;
 		public static float cubeSize;
 
 		List<Cube> cubes;
 
 		public MeshManager()
 		{
-			cubeMaterial = Default.Material;
 			cubeSize = 0.1f;
 
 			cubes = new List<Cube>();
-		}
-		public void ChangeMaterialColor()
-		{
-			Random random = new Random();
-			cubeMaterial.SetColor("color", Color.HSV(new Vec3((float)random.Next() / int.MaxValue, 0.8f, 1f)));
 		}
 
 		public void Draw()
@@ -37,8 +30,8 @@ namespace StereoKit_Hackathon
 
 			if (CheckIfCubeMeshAtPosition(pinchPos)) return;
 
-			ChangeMaterialColor();
 			Cube cube = new Cube(pinchPos);
+			cube.ChangeMaterialColor(); 
 			cubes.Add(cube);
 		}
 		bool CheckIfCubeMeshAtPosition(Vec3 posToCheck)
