@@ -7,11 +7,15 @@ namespace StereoKit_Hackathon
 	public class MeshManager
 	{
 		public static Material cubeMaterial;
+		public static float cubeSize;
+
 		List<Cube> cubes;
 
 		public MeshManager()
 		{
 			cubeMaterial = Default.Material;
+			cubeSize = 0.1f;
+
 			cubes = new List<Cube>();
 		}
 
@@ -24,10 +28,29 @@ namespace StereoKit_Hackathon
 		}
 		public void AddCube(Vec3 pinchPos)
 		{
+			pinchPos = pinchPos.RoundToClosest(cubeSize);
+
+			if (CheckIfCubeMeshAtPosition(pinchPos)) return;
+			
+
+			//Console.WriteLine($"pinch pos z = {pinchPos.z}");
 			Cube cube = new Cube(pinchPos);
-			Console.WriteLine($"pinch pos z = {pinchPos.z}");
 			cubes.Add(cube);
 		}
+		bool CheckIfCubeMeshAtPosition(Vec3 posToCheck)
+		{
+			foreach (Cube _cube in cubes)
+			{
+				if(_cube.GetPos().x == posToCheck.x &&
+					_cube.GetPos().y == posToCheck.y &&
+					_cube.GetPos().z == posToCheck.z)
+				{
+					return true;
+				}
+			}
+			return false;
+		}
+
 		public void HandleIsJustPinched()
 		{
 			for (int h = 0; h < (int)Handed.Max; h++)

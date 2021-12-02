@@ -14,14 +14,14 @@ namespace StereoKit_Hackathon
 		{
             cubePose = new Pose(0, 0, -0.5f, Quat.Identity);
             cubeModel = Model.FromMesh(
-                Mesh.GenerateRoundedCube(Vec3.One * 0.1f, 0.02f),
+                Mesh.GenerateCube(Vec3.One * MeshManager.cubeSize),
                 MeshManager.cubeMaterial);
         }
         public Cube(Vec3 pos)
         {
             cubePose = new Pose(pos, Quat.Identity);
             cubeModel = Model.FromMesh(
-                Mesh.GenerateRoundedCube(Vec3.One * 0.1f, 0.02f),
+                Mesh.GenerateCube(Vec3.One * MeshManager.cubeSize),
                 MeshManager.cubeMaterial);
         }
     }
