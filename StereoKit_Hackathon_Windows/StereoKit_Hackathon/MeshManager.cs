@@ -27,13 +27,24 @@ namespace StereoKit_Hackathon
 		{
 			pinchPos = pinchPos.RoundToClosest(cubeSize);
 
-			if (CheckIfCubeMeshAtPosition(pinchPos)) return;
+			if (CubeMeshAtPosition(pinchPos) != null) return;
 
 			Cube cube = new Cube(pinchPos);
 			cube.ChangeMaterialColor(); 
 			cubes.Add(cube);
 		}
-		bool CheckIfCubeMeshAtPosition(Vec3 posToCheck)
+		public void RemoveCube(Vec3 pinchPos)
+		{
+			pinchPos = pinchPos.RoundToClosest(cubeSize);
+
+			var existingCube = CubeMeshAtPosition(pinchPos);
+
+			if (existingCube != null)
+			{
+				cubes.Remove(existingCube);
+			}
+		}
+		Cube CubeMeshAtPosition(Vec3 posToCheck)
 		{
 			foreach (Cube _cube in cubes)
 			{
@@ -41,13 +52,13 @@ namespace StereoKit_Hackathon
 					_cube.GetPos().y == posToCheck.y &&
 					_cube.GetPos().z == posToCheck.z)
 				{
-					return true;
+					return _cube;
 				}
 			}
-			return false;
+			return null;
 		}
 
-		public void HandleIsJustPinched()
+		internal void HandleIsJustPinched()
 		{
 			for (int h = 0; h < (int)Handed.Max; h++)
 			{
@@ -56,7 +67,21 @@ namespace StereoKit_Hackathon
 				if (Input.Hand((Handed)h).IsTracked && hand.IsJustPinched)
 				{
 					AddCube(Input.Hand((Handed)h).pinchPt);
-					Console.WriteLine($"Is tracked {hand.IsTracked} {h}");
+					//Console.WriteLine($"Is tracked {hand.IsTracked} {h}");
+				}
+			}
+		}
+
+		internal void HandleIsJustGripped()
+		{
+			for (int h = 0; h < (int)Handed.Max; h++)
+			{
+				// Get the pose for the index fingertip
+				Hand hand = Input.Hand((Handed)h);
+				if (Input.Hand((Handed)h).IsTracked && hand.IsJustGripped)
+				{
+					RemoveCube(Input.Hand((Handed)h).pinchPt);
+					//Console.WriteLine($"Is tracked {hand.IsTracked} {h}");
 				}
 			}
 		}

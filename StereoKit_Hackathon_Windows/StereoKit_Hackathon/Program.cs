@@ -31,6 +31,7 @@ namespace StereoKit_Hackathon
                     Default.MeshCube.Draw(floorMaterial, floorTransform);
                 
                 meshManager.HandleIsJustPinched();
+                meshManager.HandleIsJustGripped();
                 meshManager.Draw();
 
                 //UI.Handle("Cube", ref cubePose, cube.Bounds);
