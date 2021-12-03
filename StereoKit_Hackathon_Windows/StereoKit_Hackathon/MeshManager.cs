@@ -10,12 +10,19 @@ namespace StereoKit_Hackathon
 
 		List<Cube> cubes;
 
+		public Action<Vec3> OnPinch;
+		public Action<Vec3> OnGrip;
+
 		public MeshManager()
 		{
 			cubeSize = 0.1f;
 			cubes = new List<Cube>();
+
+			OnPinch += AddCube;
+			OnGrip += ChangeCubeColor;
 		}
 
+		#region Cube-Related-Functions
 		public void Draw()
 		{
 			foreach (Cube _cube in cubes)
@@ -44,6 +51,17 @@ namespace StereoKit_Hackathon
 				cubes.Remove(existingCube);
 			}
 		}
+		public void ChangeCubeColor(Vec3 pinchPos)
+		{
+			pinchPos = pinchPos.RoundToClosest(cubeSize);
+
+			var existingCube = CubeMeshAtPosition(pinchPos);
+
+			if (existingCube != null)
+			{
+				existingCube.ChangeMaterialColor();
+			}
+		}
 		Cube CubeMeshAtPosition(Vec3 posToCheck)
 		{
 			foreach (Cube _cube in cubes)
@@ -57,33 +75,6 @@ namespace StereoKit_Hackathon
 			}
 			return null;
 		}
-
-		internal void HandleIsJustPinched()
-		{
-			for (int h = 0; h < (int)Handed.Max; h++)
-			{
-				// Get the pose for the index fingertip
-				Hand hand = Input.Hand((Handed)h);
-				if (Input.Hand((Handed)h).IsTracked && hand.IsJustPinched)
-				{
-					AddCube(Input.Hand((Handed)h).pinchPt);
-					//Console.WriteLine($"Is tracked {hand.IsTracked} {h}");
-				}
-			}
-		}
-
-		internal void HandleIsJustGripped()
-		{
-			for (int h = 0; h < (int)Handed.Max; h++)
-			{
-				// Get the pose for the index fingertip
-				Hand hand = Input.Hand((Handed)h);
-				if (Input.Hand((Handed)h).IsTracked && hand.IsJustGripped)
-				{
-					RemoveCube(Input.Hand((Handed)h).pinchPt);
-					//Console.WriteLine($"Is tracked {hand.IsTracked} {h}");
-				}
-			}
-		}
+		#endregion
 	}
 }

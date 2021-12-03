@@ -29,9 +29,20 @@ namespace StereoKit_Hackathon
             {
                 if (SK.System.displayType == Display.Opaque)
                     Default.MeshCube.Draw(floorMaterial, floorTransform);
-                
-                meshManager.HandleIsJustPinched();
-                meshManager.HandleIsJustGripped();
+
+                for (int h = 0; h < (int)Handed.Max; h++)
+                {
+                    // Get the pose for the index fingertip
+                    Hand hand = Input.Hand((Handed)h);
+                    if (Input.Hand((Handed)h).IsTracked && hand.IsJustPinched)
+                    {
+                        meshManager.OnPinch(Input.Hand((Handed)h).pinchPt);
+                    }
+                    if (Input.Hand((Handed)h).IsTracked && hand.IsJustGripped)
+					{
+                        meshManager.OnGrip(Input.Hand((Handed)h).pinchPt);
+                    }
+                }
                 meshManager.Draw();
 
                 //UI.Handle("Cube", ref cubePose, cube.Bounds);
