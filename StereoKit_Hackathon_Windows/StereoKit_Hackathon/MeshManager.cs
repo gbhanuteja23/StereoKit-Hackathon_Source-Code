@@ -20,6 +20,7 @@ namespace StereoKit_Hackathon
 
 			OnPinch += AddCube;
 			OnGrip += ChangeCubeColor;
+			//OnGrip += RemoveCube;
 		}
 
 		#region Cube-Related-Functions

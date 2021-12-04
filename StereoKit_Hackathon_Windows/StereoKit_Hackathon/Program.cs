@@ -23,6 +23,7 @@ namespace StereoKit_Hackathon
 
             //initialize and create objects
             MeshManager meshManager = new MeshManager();
+            UIManager uiManager = new UIManager();
 
             // Core application loop
             while (SK.Step(() =>
@@ -34,16 +35,17 @@ namespace StereoKit_Hackathon
                 {
                     // Get the pose for the index fingertip
                     Hand hand = Input.Hand((Handed)h);
-                    if (Input.Hand((Handed)h).IsTracked && hand.IsJustPinched)
+                    if (Input.Hand((Handed)h).IsTracked && hand.IsJustPinched && !UI.IsInteracting((Handed)h))
                     {
                         meshManager.OnPinch(Input.Hand((Handed)h).pinchPt);
                     }
-                    if (Input.Hand((Handed)h).IsTracked && hand.IsJustGripped)
+                    if (Input.Hand((Handed)h).IsTracked && hand.IsJustGripped && !UI.IsInteracting((Handed)h))
 					{
                         meshManager.OnGrip(Input.Hand((Handed)h).pinchPt);
                     }
                 }
                 meshManager.Draw();
+                uiManager.ShowWindow(meshManager);
 
                 //UI.Handle("Cube", ref cubePose, cube.Bounds);
             }));
