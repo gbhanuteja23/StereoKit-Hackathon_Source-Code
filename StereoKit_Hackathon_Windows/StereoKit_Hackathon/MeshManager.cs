@@ -18,9 +18,8 @@ namespace StereoKit_Hackathon
 			cubeSize = 0.1f;
 			cubes = new List<Cube>();
 
-			OnPinch += AddCube;
-			OnGrip += ChangeCubeColor;
-			//OnGrip += RemoveCube;
+			OnPinch += (Vec3 pinchPos) => { };
+			OnGrip += (Vec3 pinchPos) => { };
 		}
 
 		#region Cube-Related-Functions
