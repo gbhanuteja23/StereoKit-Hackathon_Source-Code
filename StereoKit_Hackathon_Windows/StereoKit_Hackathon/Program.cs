@@ -39,6 +39,10 @@ namespace StereoKit_Hackathon
                     {
                         meshManager?.OnPinch(Input.Hand((Handed)h).pinchPt);
                     }
+                    if (Input.Hand((Handed)h).IsTracked && hand.IsJustUnpinched && !UI.IsInteracting((Handed)h))
+                    {
+                        meshManager?.OnUnPinch(Input.Hand((Handed)h).pinchPt);
+                    }
                     if (Input.Hand((Handed)h).IsTracked && hand.IsJustGripped && !UI.IsInteracting((Handed)h))
 					{
                         meshManager?.OnGrip(Input.Hand((Handed)h).pinchPt);

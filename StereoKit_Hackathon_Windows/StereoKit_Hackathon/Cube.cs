@@ -10,7 +10,12 @@ namespace StereoKit_Hackathon
         public Material cubeMat; 
 
 		public Vec3 GetPos() => cubePose.position;
-		public Pose GetPose() => cubePose;
+        public Pose GetPose() => cubePose;
+        public void SetPos(Vec3 newPos) 
+        {
+            cubePose.position = newPos;
+            //cubePose = new Pose(GetPos(), Quat.Identity); 
+        }
 
 		public Cube()
 		{

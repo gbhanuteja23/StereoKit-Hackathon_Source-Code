@@ -11,15 +11,21 @@ namespace StereoKit_Hackathon
 		List<Cube> cubes;
 
 		public Action<Vec3> OnPinch;
+		public Action<Vec3> OnUnPinch;
 		public Action<Vec3> OnGrip;
+
+		Cube _cubeToManipulate;
 
 		public MeshManager()
 		{
 			cubeSize = 0.1f;
 			cubes = new List<Cube>();
 
-			OnPinch += (Vec3 pinchPos) => { };
-			OnGrip += (Vec3 pinchPos) => { };
+			_cubeToManipulate = null;
+
+			OnPinch = (Vec3 pinchPos) => { };
+			OnUnPinch = (Vec3 pinchPos) => { };
+			OnGrip = (Vec3 pinchPos) => { };
 		}
 
 		#region Cube-Related-Functions
@@ -30,6 +36,8 @@ namespace StereoKit_Hackathon
 				_cube.cubeModel.Draw(_cube.GetPose().ToMatrix());
 			}
 		}
+
+		//Cube Handling
 		public void AddCube(Vec3 pinchPos)
 		{
 			pinchPos = pinchPos.RoundToClosest(cubeSize);
@@ -62,6 +70,22 @@ namespace StereoKit_Hackathon
 				existingCube.ChangeMaterialColor();
 			}
 		}
+
+		//transform tools
+		void MoveCubeStarted(Vec3 pinchPos)
+		{
+			pinchPos = pinchPos.RoundToClosest(cubeSize);
+
+			_cubeToManipulate = CubeMeshAtPosition(pinchPos);
+		}
+		void MoveCubeEnded(Vec3 pinchPos)
+		{
+			pinchPos = pinchPos.RoundToClosest(cubeSize);
+
+			_cubeToManipulate = CubeMeshAtPosition(pinchPos);
+		}
+
+		//cube utility
 		Cube CubeMeshAtPosition(Vec3 posToCheck)
 		{
 			foreach (Cube _cube in cubes)

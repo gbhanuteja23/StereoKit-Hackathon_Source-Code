@@ -40,22 +40,15 @@ namespace StereoKit_Hackathon
 			UI.Text(pinchMode, TextAlign.TopCenter);
 			UI.HSeparator();
 
-			if (UI.Button("Spawn"))
+			if (UI.ButtonRound("Position", Sprite.FromFile("Icons/Icons_MoveTool.png"), 0.035f))
 			{
-				_meshManager.OnPinch = _meshManager.AddCube;
-				pinchMode = "Spawn";
+				pinchMode = "Move Tool";
 			}
-			if (UI.Button("Delete"))
+			UI.SameLine();
+			if (UI.ButtonRound("Rotate", Sprite.FromFile("Icons/Icons_MoveTool.png"), 0.035f))
 			{
-				_meshManager.OnPinch = _meshManager.RemoveCube;
-				pinchMode = "Delete";
+				pinchMode = "Rotate Tool";
 			}
-			if (UI.Button("Change"))
-			{
-				_meshManager.OnPinch = _meshManager.ChangeCubeColor;
-				pinchMode = "Change";
-			}
-
 			UI.WindowEnd();
 
 

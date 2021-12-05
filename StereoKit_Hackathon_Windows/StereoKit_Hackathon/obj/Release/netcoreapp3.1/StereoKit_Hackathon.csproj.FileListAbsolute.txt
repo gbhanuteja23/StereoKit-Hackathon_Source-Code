@@ -85,3 +85,4 @@ D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\Ster
 D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\obj\Release\netcoreapp3.1\StereoKit_Hackathon.dll
 D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\obj\Release\netcoreapp3.1\StereoKit_Hackathon.pdb
 D:\3- Project Things\3- StereoKit Hackathon\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\obj\Release\netcoreapp3.1\StereoKit_Hackathon.genruntimeconfig.cache
+C:\StereoKit\StereoKit-Hackathon_Source-Code\StereoKit_Hackathon_Windows\StereoKit_Hackathon\bin\Release\netcoreapp3.1\Assets\Icons\Icons_MoveTool.png
