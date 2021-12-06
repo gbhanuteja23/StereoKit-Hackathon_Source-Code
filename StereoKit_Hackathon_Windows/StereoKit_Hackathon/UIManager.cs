@@ -34,22 +34,22 @@ namespace StereoKit_Hackathon
 			windowLeftPose = new Pose(leftPosition, Quat.LookAt(leftPosition, Input.Head.position));
 			windowRightPose = new Pose(rightPosition, Quat.LookAt(rightPosition, Input.Head.position));
 
-			//left pinch window
-			UI.WindowBegin("Pinch", ref windowLeftPose, moveType: UIMove.FaceUser);
-			UI.HSeparator();
-			UI.Text(pinchMode, TextAlign.TopCenter);
-			UI.HSeparator();
+			////left pinch window
+			//UI.WindowBegin("Pinch", ref windowLeftPose, moveType: UIMove.FaceUser);
+			//UI.HSeparator();
+			//UI.Text(pinchMode, TextAlign.TopCenter);
+			//UI.HSeparator();
 
-			if (UI.ButtonRound("Position", Sprite.FromFile("Icons/Icons_MoveTool.png"), 0.035f))
-			{
-				pinchMode = "Move Tool";
-			}
-			UI.SameLine();
-			if (UI.ButtonRound("Rotate", Sprite.FromFile("Icons/Icons_MoveTool.png"), 0.035f))
-			{
-				pinchMode = "Rotate Tool";
-			}
-			UI.WindowEnd();
+			//if (UI.ButtonRound("Position", Sprite.FromFile("Icons/Icons_MoveTool.png"), 0.035f))
+			//{
+			//	pinchMode = "Move Tool";
+			//}
+			//UI.SameLine();
+			//if (UI.ButtonRound("Rotate", Sprite.FromFile("Icons/Icons_MoveTool.png"), 0.035f))
+			//{
+			//	pinchMode = "Rotate Tool";
+			//}
+			//UI.WindowEnd();
 
 
 			//right grip window
@@ -69,10 +69,10 @@ namespace StereoKit_Hackathon
 				_meshManager.OnGrip = _meshManager.RemoveCube;
 				gripMode = "Delete";
 			}
-			if (UI.Button("Change"))
+			if (UI.Button("Colour"))
 			{
 				_meshManager.OnGrip = _meshManager.ChangeCubeColor;
-				gripMode = "Change";
+				gripMode = "Colour";
 			}
 
 			UI.WindowEnd();
